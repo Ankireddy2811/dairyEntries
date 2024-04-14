@@ -9,7 +9,7 @@ const User = require("./models/Users");
 const DiaryEntry = require("./models/DiaryEntry")
 
 require('dotenv').config();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 
 app.use(express.json());
@@ -57,24 +57,23 @@ const initlizeServer = async () => {
         });
 
 
-        const middleware = (request,response,next)=>{
-            let jwtToken = request.headers.authorization.split(" ")[1]
-            if (jwtToken === undefined){
-            response.send(401);
-            response.send("Invalid JWT token");
+        const middleware = (request, response, next) => {
+            const authorizationHeader = request.headers.authorization;
+            if (!authorizationHeader) {
+                response.status(401).send("Invalid JWT token");
+            } else {
+                const jwtToken = authorizationHeader.split(" ")[1];
+                jwt.verify(jwtToken, "MY_SECRET_KEY", (error, payload) => {
+                    if (error) {
+                        response.status(401).send("Invalid JWT Token");
+                    } else {
+                        request.username = payload.username;
+                        next();
+                    }
+                });
             }
-            else{
-                jwt.verify(jwtToken,"MY_SECRET_KEY",(error,payload)=>{
-                if(error){
-                    response.status(401);
-                    response.send("Invalid JWT Token");
-                }
-                else{
-                    next()
-                }
-                })
-            }
-        }
+        };
+        
        
         app.post("/createDairyEntrie", middleware, async(request, response) => {
             const {title,description,date} = request.body
