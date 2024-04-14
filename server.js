@@ -110,7 +110,7 @@ const initlizeServer = async () => {
            
         });
 
-        app.get("/getDairyEntries", middleware, async(request, response) => {
+        app.get("/getDairyEntries", async(request, response) => {
 
             try {
                 const result = await diaryEntry.read();
