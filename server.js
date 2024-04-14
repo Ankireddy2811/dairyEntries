@@ -8,9 +8,12 @@ const jwt = require("jsonwebtoken");
 const User = require("./models/Users");
 const DiaryEntry = require("./models/DiaryEntry")
 
+require('dotenv').config();
+const port = process.env.PORT || 3000;
+
+
 app.use(express.json());
 
-const port = 3000;
 
  // Start server
  app.listen(port, () => {
