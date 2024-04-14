@@ -1,6 +1,5 @@
 # dairyEntries
 
-
 # Introduction
 
 # The Travel Diary Platform backend is built using Node.js and Express.js, with SQLite as the database system. It provides a secure and efficient API for managing user accounts and travel diary entries.
