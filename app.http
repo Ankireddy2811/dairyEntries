@@ -5,10 +5,10 @@ Content-Type: application/json
 
 
 {
-    "name":"Ankaiah",
-    "password":"Anki@123",
-    "mobile":9390304789,
-    "address":"Nellore"
+    "name":"Ramu",
+    "password":"ramu@123",
+    "mobile":8883334449,
+    "address":"Kadapa"
 }
 
 
@@ -32,9 +32,8 @@ Content-Type: application/json
 
 
 {
-    "name":"Ankaiah",
-    "password":"Anki@123"
-    
+    "name":"Ramu",
+    "password":"ramu@123"
 
 }
 
@@ -54,14 +53,14 @@ Content-Type: application/json
 ###
 
 POST http://localhost:3000/createDairyEntrie
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFua2FpYWgiLCJpYXQiOjE3MTMwNzMzNjJ9.FihDJedCMgD8m-IvSnVPPUftR8vLVnwNid-OnsYU3U4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbXUiLCJpYXQiOjE3MTMxNDkxNzJ9.jfoXfA7CoPL51i8_4pwPqMyYGHCGQF4CyOgAzRqNZbY
 Content-Type: application/json
 
 
 {
-    "title":"England Tour",
-    "description":"The England Tour diary entry chronicles an exhilarating journey across the picturesque landscapes and vibrant cities of England",
-    "date":"2024-08-12"
+    "title":"Spain Tour",
+    "description":"The Spain Tour diary entry chronicles an exhilarating journey across the picturesque landscapes and vibrant cities of England",
+    "date":"2024-12-22"
 }
 
 
@@ -69,14 +68,14 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/getDairyEntries
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFua2FpYWgiLCJpYXQiOjE3MTMwNzMzNjJ9.FihDJedCMgD8m-IvSnVPPUftR8vLVnwNid-OnsYU3U4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbXUiLCJpYXQiOjE3MTMxNDkxNzJ9.jfoXfA7CoPL51i8_4pwPqMyYGHCGQF4CyOgAzRqNZbY
 
 
 
 ###
 
-PUT http://localhost:3000/updateDairyEntrie/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFua2FpYWgiLCJpYXQiOjE3MTMwNzMzNjJ9.FihDJedCMgD8m-IvSnVPPUftR8vLVnwNid-OnsYU3U4
+PUT http://localhost:3000/updateDairyEntrie/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbXUiLCJpYXQiOjE3MTMxNDkxNzJ9.jfoXfA7CoPL51i8_4pwPqMyYGHCGQF4CyOgAzRqNZbY
 Content-Type: application/json
 
 
@@ -89,8 +88,8 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/deleteDairyEntrie/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFua2FpYWgiLCJpYXQiOjE3MTMwNzMzNjJ9.FihDJedCMgD8m-IvSnVPPUftR8vLVnwNid-OnsYU3U4
+DELETE http://localhost:3000/deleteDairyEntrie/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbXUiLCJpYXQiOjE3MTMxNDkxNzJ9.jfoXfA7CoPL51i8_4pwPqMyYGHCGQF4CyOgAzRqNZbY
 
 
 
